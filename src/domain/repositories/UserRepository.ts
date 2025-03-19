@@ -1,5 +1,5 @@
 import {User} from '..';
 
-export interface UserRepository {
+export default interface UserRepository {
     create(): Promise<User | null>;
 }

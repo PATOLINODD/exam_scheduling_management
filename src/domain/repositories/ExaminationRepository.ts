@@ -1,5 +1,5 @@
 import { Examination } from "../index";
 
-export interface ExaminationRepository {
+export default interface ExaminationRepository {
   list(): Promise<Examination[] | null>;
 }
