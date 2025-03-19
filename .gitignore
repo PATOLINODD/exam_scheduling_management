@@ -1,0 +1,38 @@
+# Node modules
+/node_modules
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# TypeScript build
+/dist
+/build
+*.tsbuildinfo
+
+# MacOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# npm
+package-lock.json
+yarn.lock
+
+# coverage directory
+/coverage
