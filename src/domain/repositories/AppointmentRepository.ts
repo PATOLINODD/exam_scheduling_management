@@ -1,4 +1,4 @@
-import { Appointment } from '..';
+import { Appointment } from '@/domain';
 
 export default interface AppointmentRepository {
     add(): Promise<Appointment | null>;
