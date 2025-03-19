@@ -1,0 +1,38 @@
+version: '3.8'
+
+networks:
+  pato_network:
+    driver: bridge
+
+services:
+  postgres_database:
+    image: postgres:15
+    container_name: my_postgres_db
+    restart: on-failure:3
+    ports:
+      - "5000:5000"
+    env_file:
+      - db.env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - pato_network
+
+  app:
+    build: .
+    container_name: my_node_app
+    restart: on-failure:3
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres_database
+    env_file:
+      - app.env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      - pato_network
+
+volumes:
+  postgres_data:
