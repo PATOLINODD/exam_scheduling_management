@@ -1,6 +1,6 @@
 import { Appointment } from '..';
 
-export interface AppointmentRepository {
+export default interface AppointmentRepository {
     add(): Promise<Appointment | null>;
     view(): Promise<Appointment | null>;
     remove(): Promise<boolean>;
