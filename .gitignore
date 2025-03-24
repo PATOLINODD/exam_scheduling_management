@@ -37,3 +37,7 @@ yarn.lock
 
 # coverage directory
 /coverage
+
+
+#drizzle migrations
+/migrations
