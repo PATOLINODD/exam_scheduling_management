@@ -7,10 +7,10 @@ networks:
 services:
   postgres_database:
     image: postgres:15
-    container_name: my_postgres_db
+    container_name: postgres_db
     restart: on-failure:3
     ports:
-      - "5000:5000"
+      - "5432:5432"
     env_file:
       - db.env
     volumes:
@@ -18,9 +18,9 @@ services:
     networks:
       - pato_network
 
-  app:
+  exam_scheduling:
     build: .
-    container_name: my_node_app
+    container_name: exam_scheduling_api
     restart: on-failure:3
     ports:
       - "3000:3000"
