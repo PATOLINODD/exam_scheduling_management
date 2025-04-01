@@ -1,0 +1,42 @@
+# Ignore node_modules and dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Ignore environment and secret files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.pem
+*.crt
+*.key
+
+# Ignore logs
+logs
+*.log
+log/**/*.log
+
+# Ignore build artifacts
+dist
+build
+*.tsbuildinfo
+
+# Ignore Docker-related files
+Dockerfile*
+.dockerignore
+
+# Ignore version control
+.git
+.gitignore
+
+# Ignore OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
