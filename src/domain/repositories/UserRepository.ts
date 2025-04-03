@@ -1,5 +1,6 @@
-import {User} from '@/domain';
+import { User, UserModel } from "@/domain";
 
 export default interface UserRepository {
-    create(): Promise<User | null>;
+  create(user: User): Promise<UserModel | null>;
+  get(id: string): Promise<UserModel | null>;
 }
